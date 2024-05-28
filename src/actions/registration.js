@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const REST_API_BASE_URL = 'http://localhost:8080/users/signup';
+const REST_API_BASE_URL = 'https://likuta-track-backend-11.onrender.com/users/signup';
 
 export const registerUser = async (user, redirect) => {
     try {
