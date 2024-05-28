@@ -49,7 +49,7 @@ const TheDash = () => {
         <div className="grid-sm">
             <h2>Welcome, <span className="accent">{userName}</span></h2>
             {/* <h3>Dashboard</h3> */}
-            <button className="btn btn--dark" style={{ width: '150px' }} onClick={togglePopup}>Add Budget</button>
+            
 
             {
                 showPopup && (
@@ -74,6 +74,7 @@ const TheDash = () => {
                         <p>No budgets available.</p>
                     )}
                 </div>
+                <button className="btn btn--dark" style={{ width: '150px' }} onClick={togglePopup}>Add Budget</button>
                 {expenses && expenses.length > 0 && (
                     <div className="grid-mid">
                         <h2>Recent Expenses</h2>
