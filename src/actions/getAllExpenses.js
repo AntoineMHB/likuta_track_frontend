@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const REST_API_BASE_URL = 'http://localhost:8080/expenses';
+const REST_API_BASE_URL = 'https://likuta-track-backend-11.onrender.com/expenses';
 
 export const getAllExpenses = async () => {
   try {
