@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const REST_API_BASE_URL = 'http://localhost:8080/users/login';
+const REST_API_BASE_URL = 'https://likuta-track-backend-11.onrender.com/users/login';
 
 export const loginUser = async (credentials) => {
     try {
