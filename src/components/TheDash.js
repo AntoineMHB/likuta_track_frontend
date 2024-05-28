@@ -11,8 +11,8 @@ import Table from './Table';
 
 // loader
 export function thedashLoader() {
-    const budgets = fetchData("budgets") || [];
-    const expenses = fetchData("expenses") || [];
+    const budgets = fetchData("budgets") ?? [];
+    const expenses = fetchData("expenses") ?? [];
 
     return { budgets, expenses };
 }
