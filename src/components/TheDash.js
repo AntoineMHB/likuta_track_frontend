@@ -48,7 +48,7 @@ const TheDash = () => {
     return (
         <div className="grid-sm">
             <h2>Welcome, <span className="accent">{userName}</span></h2>
-            <h3>Dashboard</h3>
+            {/* <h3>Dashboard</h3> */}
             <button className="btn btn--dark" style={{ width: '150px' }} onClick={togglePopup}>Add Budget</button>
 
             {
