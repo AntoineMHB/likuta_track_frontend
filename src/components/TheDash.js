@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { fetchData } from '../helpers';
 
+import AddBudgetForm from './AddBudgetForm';
 import BudgetItem from './Budgetitem';
 import Table from './Table';
+
 
 // loader
 export function thedashLoader() {
@@ -17,6 +19,18 @@ const TheDash = () => {
     const [userName, setUserName] = useState('');
     const { budgets: initialBudgets, expenses } = useLoaderData();
     const [budgets, setBudgets] = useState(initialBudgets);
+
+    const [showPopup, setShowPopup] = useState(false);
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
+
+    const handleAddBudget = (newBudget) => {
+        console.log('New budget added:', newBudget);
+        addBudget(newBudget); // Add the new budget to the sate
+        togglePopup(); // Close the popup after adding a new 
+    };
 
     useEffect(() => {
         // Retrieve user data from local storage
@@ -35,13 +49,19 @@ const TheDash = () => {
         <div className="grid-sm">
             <h2>Welcome, <span className="accent">{userName}</span></h2>
             <h3>Dashboard</h3>
+            <button onClick={togglePopup}>Add Budget</button>
+            {
+                showPopup && (
+                    <div className="popup">
+                        <div className="popup-content">
+                            <span className="close"  onClick={togglePopup}>&times;</span>
+                            <AddBudgetForm onAddBudget={handleAddBudget} />
+                        </div>
+                    </div>
+                )
+            }
             <div className="grid-lg">
-                {/* <div className="flex-lg">
-                    <AddBudgetForm onAddBudget={addBudget} />
-                    <AddExpenseForm budgets={budgets} />
-                    <AddIncomesForm />
-                    <AddFinancialGoalForm />
-                </div> */}
+               
 
                 <h2>Existing Budgets</h2>
                 <div className="budgets">

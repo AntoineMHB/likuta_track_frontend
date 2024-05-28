@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { createBudget } from '../actions/budgetAction';
 
 
-const AddBudgetForm = ({ onAddBudget }) => {
+const AddBudgetForm = ({ onAddBudget, }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef();
   const focusRef = useRef();
