@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { fetchData } from '../helpers';
-import AddBudgetForm from './AddBudgetForm';
-import AddExpenseForm from './AddExpenseForm';
-import AddFinancialGoalForm from './AddFinancialGoalForm';
-import AddIncomesForm from './AddIncomesForm';
 
 import BudgetItem from './Budgetitem';
 import Table from './Table';
@@ -38,14 +34,14 @@ const TheDash = () => {
     return (
         <div className="grid-sm">
             <h2>Welcome, <span className="accent">{userName}</span></h2>
-            <h3>My Dashboard</h3>
+            <h3>Dashboard</h3>
             <div className="grid-lg">
-                <div className="flex-lg">
+                {/* <div className="flex-lg">
                     <AddBudgetForm onAddBudget={addBudget} />
                     <AddExpenseForm budgets={budgets} />
                     <AddIncomesForm />
                     <AddFinancialGoalForm />
-                </div>
+                </div> */}
 
                 <h2>Existing Budgets</h2>
                 <div className="budgets">
