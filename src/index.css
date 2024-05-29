@@ -693,7 +693,7 @@ button[type="submit"] {
 
 .sidebar {
   width: 500px;
-  background-color: #f4f4f4;
+  background-color: var(--backdrop);
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 
