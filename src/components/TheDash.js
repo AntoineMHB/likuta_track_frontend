@@ -48,11 +48,11 @@ const TheDash = () => {
 
     return (
         <div className="grid-sm">
-            <TheSidebar/>
+            
             <h2>Welcome, <span className="accent">{userName}</span></h2>
             {/* <h3>Dashboard</h3> */}
             
-
+            <TheSidebar/>
             {
                 showPopup && (
                     <div className="popup">
