@@ -2,8 +2,8 @@ import React from 'react';
 
 function TheSidebar() {
   return (
-    <div>
-       TheSidebar
+    <div className="TheSidebar">
+          TheSidebar
     </div>
   )
 }
