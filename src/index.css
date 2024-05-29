@@ -682,6 +682,11 @@ button[type="submit"] {
 
 /* Sidebar */
 
+.TheDash {
+  width: 100vw;
+  height: 100vh;
+}
+
 .TheSidebar {
   height: 100%;
   width: 300px;
