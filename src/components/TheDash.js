@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { fetchData } from '../helpers';
 
+import Sidebar from '.Components/Sidebar';
 import AddBudgetForm from './AddBudgetForm';
 import BudgetItem from './Budgetitem';
 import Table from './Table';
@@ -47,6 +48,7 @@ const TheDash = () => {
 
     return (
         <div className="grid-sm">
+            <Sidebar/>
             <h2>Welcome, <span className="accent">{userName}</span></h2>
             {/* <h3>Dashboard</h3> */}
             
