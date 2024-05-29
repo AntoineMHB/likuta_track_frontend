@@ -682,15 +682,21 @@ button[type="submit"] {
 
 /* Sidebar */
 
-.TheDash {
-  width: 100vw;
-  height: 100vh;
+.container {
+  display: flex;
 }
 
-.TheSidebar {
-  height: 100%;
-  width: 300px;
-  background-color: aqua;
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+
 }
 
 
