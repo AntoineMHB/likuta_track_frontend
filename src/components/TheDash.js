@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchData } from '../helpers';
 
 import AddBudgetForm from './AddBudgetForm';
 import BudgetItem from './Budgetitem';
+import { SidebarData } from './SidebarData';
 import Table from './Table';
 import TheSidebar from './TheSidebar';
 
@@ -19,7 +20,7 @@ export function thedashLoader() {
 
 const TheDash = () => {
     const [userName, setUserName] = useState('');
-    const { budgets: initialBudgets, expenses } = useLoaderData();
+    const { budgets: initialBudgets, expenses } = thedashLoader()
     const [budgets, setBudgets] = useState(initialBudgets);
     const [showPopup, setShowPopup] = useState(false);
 
@@ -47,7 +48,7 @@ const TheDash = () => {
 
     return (
         <div className="container">
-            <TheSidebar />
+            <TheSidebar data={SidebarData} />
             <div className="main-content">
                 <div className="grid-sm">
                     <h2>Welcome, <span className="accent">{userName}</span></h2>

@@ -1,25 +1,18 @@
 import React from 'react';
 
-import { SidebarData } from './SidebarData';
-function TheSidebar() {
+const TheSidebar = ({ data }) => {
   return (
     <div className="TheSidebar">
-       <ul>
-    {SidebarData.map((val, key)=> {
-      return (
-        <li key={key} onClick={()=>{window.location.pathname = val.link}}> 
-          {" "}
-        <div>{val.icon}</div>{" "}
-        <div>
-          {val.title}
-        </div>
-        </li>);
-
-      
-    })}
-    </ul>
+   
+        {data.map((val, key) => {
+          return (
+            <div key={key} onClick={() => { window.location.pathname = val.link }}>
+              
+            </div>
+          );
+        })}
     </div>
-  )
-}
+  );
+};
 
 export default TheSidebar;
