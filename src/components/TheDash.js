@@ -16,7 +16,8 @@ export function thedashLoader() {
     return { budgets, expenses };
 }
 
-export const TheDash = () => {
+
+const TheDash = () => {
     const [userName, setUserName] = useState('');
     const { budgets: initialBudgets, expenses } = useLoaderData();
     const [budgets, setBudgets] = useState(initialBudgets);
@@ -88,4 +89,4 @@ export const TheDash = () => {
     );
 }
 
-
+export default TheDash;
