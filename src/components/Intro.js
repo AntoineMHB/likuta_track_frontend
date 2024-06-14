@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Form, Link, useNavigate } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 
@@ -40,7 +40,7 @@ const Intro = () => {
             Start your journey today.
         </p>
    
-   <form onSubmit={handleLogin}>
+   <Form onSubmit={handleLogin}>
     <input 
         type="text" 
         name="username" 
@@ -65,7 +65,7 @@ const Intro = () => {
         <span>Login</span>
         <UserPlusIcon width={20}/>
     </button>          
-</form>
+</Form>
 
 <p>If you don't have an account, you can sign up</p>
 <Link to="/signup" className="btn btn--primary"> {/* Use Link for client-side navigation */}
