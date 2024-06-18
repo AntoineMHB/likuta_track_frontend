@@ -20,7 +20,7 @@ const Intro = () => {
     event.preventDefault();
     
     try {
-      const response = await axios.post('https://likuta-track-backend-11.onrender.com/users/login', { username, password });
+      const response = await axios.post('http://localhost:8080/users/login', { username, password });
       localStorage.setItem('user', JSON.stringify(response.data)); //here we store user details in the localStorage
       toast.success("Login successful!");
       navigate('/theDash'); // Redirect to dashboard
