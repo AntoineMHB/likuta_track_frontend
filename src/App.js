@@ -21,10 +21,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Components
 import { BudgetProvider } from "./actions/BudgetContext";
+import AdminPage from "./components/AdminPage";
 import Signup from "./components/Signup";
 import TheDash, { thedashLoader } from "./components/TheDash";
-
-
 
 
 const router = createBrowserRouter([
@@ -59,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "logout",
         action: logoutAction,
+      },
+      {
+        path:"admin",
+        element: <AdminPage/>
       }
     ]
   }
